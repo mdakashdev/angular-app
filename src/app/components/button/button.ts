@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, Input, Output } from '@angular/core';
 
 type ButtonType = 'button' | 'reset' | 'submit';
 
@@ -9,10 +9,17 @@ type ButtonType = 'button' | 'reset' | 'submit';
   templateUrl: './button.html',
   styleUrl: './button.css',
 })
-
+//need defineEmits() -> emit('event', value);
+// @output()
 export class ButtonComponent {
   @Input() name = '';
   @Input() label = '';
   @Input() type: ButtonType = 'button';
   @Input() disabled = false;
+
+  count = 0;
+  save(){
+    this.count++;
+    //console.log('Button clicked')
+  }
 }

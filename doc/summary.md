@@ -47,4 +47,9 @@ disabled, name , type = button, reset, submit, value
 - typeScript er jonno alada type/interface declare kora jai, same to vue
 
 
-# 4. 
+# 4. slot
+# 5. two way binding
+# 6. Emit
+# 7. Event
+
+Child → Parent er jonno amra defineEmite use koreachilam

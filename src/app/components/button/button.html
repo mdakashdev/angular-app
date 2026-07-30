@@ -3,10 +3,15 @@
 <!--disabled, name , type = button, reset, submit-->
 <!--<button name="subject" type="submit" value="HTML">button</button>-->
 
+<!--<button @click="save"></button>-->
+
 <button
   [name]="name"
   [type]="type"
   [disabled]="disabled"
+  (click)="save()"
 >
   {{ label }}
 </button>
+
+<p> Clicked {{count}} times </p>
