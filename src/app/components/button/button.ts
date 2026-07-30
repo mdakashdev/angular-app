@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 type ButtonType = 'button' | 'reset' | 'submit';
 
@@ -17,9 +17,18 @@ export class ButtonComponent {
   @Input() type: ButtonType = 'button';
   @Input() disabled = false;
 
-  count = 0;
-  save(){
-    this.count++;
-    //console.log('Button clicked')
+  @Output() clicked = new EventEmitter<void>(); //decale defineEmit
+
+  //emit call this.clicked.emit();
+
+  handleClick() {
+    this.clicked.emit(); //eita childe, eita parent a listen korbe ; paren mane jekhane ami ei button use korechi - app.html
+    // amra jani same name (mane event name diye listen korte hobe) parent a - event name: clicked
   }
+
+  // count = 0;
+  // save(){
+  //   this.count++;
+  //   //console.log('Button clicked')
+  // }
 }

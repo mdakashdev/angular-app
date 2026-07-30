@@ -11,5 +11,7 @@ import { ButtonComponent } from './components/button/button'
 })
 
 export class App {
-
+  saveUser() {
+    console.log("hello app");
+  }
 }
