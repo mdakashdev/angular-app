@@ -7,6 +7,8 @@
 ng serve
 ```
 
+# 1. Build App
+
 # 2. Create Component
 
 ```text
@@ -55,6 +57,7 @@ disabled, name , type = button, reset, submit, value
 - then jekhane button use korbo - sekhane just text likhe dibo. 
 - `<ng-content>` যেখানে থাকবে, Parent-এর content সেখানে inject হবে।
 - Angular-এ named slot-এর equivalent হলো **content projection with `select`**।
+- https://angular.dev/guide/components/content-projection
 
 # 5. two way binding
 - as like v-model="username" -->  [(value)] = "username"
@@ -79,15 +82,31 @@ disabled, name , type = button, reset, submit, value
 - `parent a recv` : parent mane jekhane ami ei button use korechi - app.html - exmp -  `(clicked)="saveUser()"`
 - amra jani same name (mane event name diye listen korte hobe) parent a - event name: clicked, sei jaigai saveUser diye use korbo
 
-
 # 7. Event
 - event kivabe dhora jai, seta running ache
 - Child → Parent er jonno amra defineEmite use koreachilam
 
-# Routing
-
+# 8. Routing
+- route korar jonno, page lagbe, so, vue er moto pages folder kore kora jai, but eita manually na kore genereate korlei hoi
+- command: ng generate component pages/home
+- vue a jemon routes akta folder kore route.ts akta file a route object create korte hoi.but ekhane app.route.ts name age theke akta file thake
+- sekhanei path diye page dhoriye dilei hobe.
+- then app.ts a RouterOutlet import kore, app.html a <router-outlet></router-outlet> hoye jai, as like `router-view` in vue
 
 
 # Later
 
 - [(ngModel)]
+
+
+
+# Done
+
+* ✅ Component
+* ✅ `@Input()`
+* ✅ `@Output()`
+* ✅ Property Binding
+* ✅ Event Binding
+* ✅ Custom Two-way Binding concept
+* ✅ `<ng-content>`
+* ✅ Router

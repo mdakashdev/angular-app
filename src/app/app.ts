@@ -1,10 +1,16 @@
 import { Component } from '@angular/core';
+import { RouterOutlet, RouterLink } from '@angular/router';
 import { InputComponent } from './components/input/input';
 import { ButtonComponent } from './components/button/button'
 
 @Component({
   selector: 'app-root',
-  imports: [InputComponent, ButtonComponent],
+  imports: [
+    InputComponent,
+    ButtonComponent,
+    RouterOutlet,
+    RouterLink
+  ],
   templateUrl: './app.html',
   standalone: true,
   styleUrl: './app.css'
