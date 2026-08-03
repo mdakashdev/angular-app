@@ -1,7 +1,17 @@
 <nav>
   <a routerLink="/">Home</a> | <a routerLink="/about">About</a>
 </nav>
+<hr>
+<h3>{{ count() }}</h3>
+<hr>
+<div>
+  <button (click)="increment()">+</button>
+  <button (click)="decrement()">-</button>
+  <button (click)="reset()">reset</button>
+</div>
 
+
+<hr>
 <h1>Input Component</h1>
 <app-button
   name="subject"

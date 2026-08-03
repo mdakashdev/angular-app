@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import {Component, signal, Signal} from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { InputComponent } from './components/input/input';
 import { ButtonComponent } from './components/button/button'
@@ -17,8 +17,21 @@ import { ButtonComponent } from './components/button/button'
 })
 
 export class App {
+  count = signal(0);
   username = '';
   saveUser() {
     console.log("hello app");
+  }
+
+  increment() {
+    this.count.update(value => value + 1);
+  }
+
+  decrement() {
+    this.count.update(value => value - 1);
+  }
+
+  reset() {
+    this.count.set(0);
   }
 }
