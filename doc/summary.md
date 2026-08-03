@@ -1,3 +1,5 @@
+## Task 
+1. akta card componet create korbo jekhane name slot use korbo 
 
 ## app start
 
@@ -46,8 +48,14 @@ disabled, name , type = button, reset, submit, value
 - app.html(parent) -> child(button.ts, button.html)
 - typeScript er jonno alada type/interface declare kora jai, same to vue
 
-
 # 4. slot
+- Angular-এ `<slot>` নেই।
+- but <ng-content></ng-content> ache, 
+- component a amra jemon likhtam </slot> thik temoni likhbo <ng-content></ng-content>
+- then jekhane button use korbo - sekhane just text likhe dibo. 
+- `<ng-content>` যেখানে থাকবে, Parent-এর content সেখানে inject হবে।
+- Angular-এ named slot-এর equivalent হলো **content projection with `select`**।
+
 # 5. two way binding
 - as like v-model="username" -->  [(value)] = "username"
 
@@ -77,3 +85,9 @@ disabled, name , type = button, reset, submit, value
 - Child → Parent er jonno amra defineEmite use koreachilam
 
 # Routing
+
+
+
+# Later
+
+- [(ngModel)]

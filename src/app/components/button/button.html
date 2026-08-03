@@ -11,7 +11,7 @@
   [disabled]="disabled"
   (click)="handleClick()"
 >
-  {{ label }}
+  {{ label }} <ng-content></ng-content>
 </button>
 
 <!--<p> Clicked {{count}} times </p>-->
