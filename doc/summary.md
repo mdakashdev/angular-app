@@ -49,7 +49,19 @@ disabled, name , type = button, reset, submit, value
 
 # 4. slot
 # 5. two way binding
-# 6. Emit
-# 7. Event
 
-Child → Parent er jonno amra defineEmite use koreachilam
+
+# 6. Emit
+- emit vue er concept er motoi, ekhane ami child theke parent a listen korbo, se jonno
+- template part a, click a method call korbo - angular a template part hocche - button.html exm- `(click)="handleClick()"`
+- then ei method ta script part a dhorbo, ekhane script part hocche - button.ts exm- handleClick() { this.tested.emit(); }
+- listen korte hole, emit define korte hobe - @Output() clicked = new EventEmitter<void>(); eivabe define kore
+- then method  theke emit call korbo, taholei listen hobe
+- `parent a recv` : parent mane jekhane ami ei button use korechi - app.html - exmp -  `(clicked)="saveUser()"`
+- amra jani same name (mane event name diye listen korte hobe) parent a - event name: clicked, sei jaigai saveUser diye use korbo
+
+
+# 7. Event
+- event kivabe dhora jai, seta running ache
+- Child → Parent er jonno amra defineEmite use koreachilam
+

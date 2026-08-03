@@ -17,13 +17,13 @@ export class ButtonComponent {
   @Input() type: ButtonType = 'button';
   @Input() disabled = false;
 
-  @Output() clicked = new EventEmitter<void>(); //decale defineEmit
+  @Output() clicked = new EventEmitter<void>(); //declare defineEmit
 
   //emit call this.clicked.emit();
 
   handleClick() {
-    this.clicked.emit(); //eita childe, eita parent a listen korbe ; paren mane jekhane ami ei button use korechi - app.html
-    // amra jani same name (mane event name diye listen korte hobe) parent a - event name: clicked
+    this.clicked.emit(); //eita child, eita parent a listen korbe ;
+    //console.log('test');
   }
 
   // count = 0;
