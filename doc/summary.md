@@ -49,7 +49,18 @@ disabled, name , type = button, reset, submit, value
 
 # 4. slot
 # 5. two way binding
+- as like v-model="username" -->  [(value)] = "username"
 
+- app.ts parent:
+  - ami parent app.ts theke v-model a username dibo, ja props er maddhome child a input.ts a dekhabe.
+  - how ? 
+  - vue hole ja kortam (parent - child): v-model="username" , const username = ref('');  then child a - props ta rcv kore `modelValue: string,` then `:value="modelValue"` input a peye jai
+  - now angular - [(value)] = "username" , then username = ''; ---- after that child a , @Input() value = ''; and [value]="value"
+- input.ts child:
+  - child theke parent data dhorar jonno - (input) diye akta method call, sekhane theke value dhore, emit call korlei hoye jai, 
+  - child a kono method dhora / listen kora lagen bec. [(value)] use korechi, eita use kora manei 
+  - [value]="usernmae" (valueChange)="usernmae = $event"    
+  - https://angular.dev/guide/templates/two-way-binding
 
 # 6. Emit
 - emit vue er concept er motoi, ekhane ami child theke parent a listen korbo, se jonno
@@ -65,3 +76,4 @@ disabled, name , type = button, reset, submit, value
 - event kivabe dhora jai, seta running ache
 - Child → Parent er jonno amra defineEmite use koreachilam
 
+# Routing

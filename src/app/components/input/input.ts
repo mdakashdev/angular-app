@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import {Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-input',
@@ -15,6 +15,18 @@ export class InputComponent {
   @Input() readonly = false;
   @Input() required = false;
   @Input() type: 'text' | 'email' | 'number' = 'text';
+  // v-model value
+  @Input() value = '';
+  // update:modelValue এর equivalent
+  @Output() valueChange = new EventEmitter<string>();
+
+  onInput(event: Event) {
+    const input = event.target as HTMLInputElement;
+    console.log(input.value);
+    this.value = input.value;
+    this.valueChange.emit(this.value);
+  }
+
 }
 
 /**

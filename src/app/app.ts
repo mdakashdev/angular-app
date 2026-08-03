@@ -11,6 +11,7 @@ import { ButtonComponent } from './components/button/button'
 })
 
 export class App {
+  username = '';
   saveUser() {
     console.log("hello app");
   }

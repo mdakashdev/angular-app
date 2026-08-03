@@ -1,4 +1,4 @@
-<label for="name">{{ label }} </label>
+<label for="name">{{ value }}</label>
 
 <input
   id="name"
@@ -7,7 +7,13 @@
   [disabled]="disabled"
   [readOnly]="readonly"
   [required]="required"
+  [value]="value"
+  (input)="onInput($event)"
 />
+
+<!--[value]="value" parent - child-->
+<!--(input)="onInput($event)",  মানে Child → Parent-->
+
 
 <!--equivalent vue: <input :type="type" />-->
 <!--property binding: []=""-->
