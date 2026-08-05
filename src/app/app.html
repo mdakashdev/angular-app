@@ -10,7 +10,10 @@
   <button (click)="reset()">reset</button>
 </div>
 
-
+<hr>
+<h2>Inject</h2>
+<p>{{ user.testname()  }}</p>
+<button (click)="user.changeName('ALi')">Change</button>
 <hr>
 <h1>Input Component</h1>
 <app-button

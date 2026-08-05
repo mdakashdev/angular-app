@@ -1,7 +1,8 @@
-import {Component, signal, Signal} from '@angular/core';
+import { Component, signal, Signal, inject } from '@angular/core';
 import { RouterOutlet, RouterLink } from '@angular/router';
 import { InputComponent } from './components/input/input';
 import { ButtonComponent } from './components/button/button'
+import { User } from './services/user';
 
 @Component({
   selector: 'app-root',
@@ -34,4 +35,7 @@ export class App {
   reset() {
     this.count.set(0);
   }
+
+  user = inject(User)
+
 }

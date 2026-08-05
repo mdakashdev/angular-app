@@ -1,5 +1,6 @@
 ## Task 
 1. akta card componet create korbo jekhane name slot use korbo 
+2. 
 
 ## app start
 
@@ -86,12 +87,23 @@ disabled, name , type = button, reset, submit, value
 - event kivabe dhora jai, seta running ache
 - Child → Parent er jonno amra defineEmite use koreachilam
 
-# 8. Routing
+# 8. Routing and pages
 - route korar jonno, page lagbe, so, vue er moto pages folder kore kora jai, but eita manually na kore genereate korlei hoi
-- command: ng generate component pages/home
+- command: `ng generate component pages/home`
 - vue a jemon routes akta folder kore route.ts akta file a route object create korte hoi.but ekhane app.route.ts name age theke akta file thake
 - sekhanei path diye page dhoriye dilei hobe.
 - then app.ts a RouterOutlet import kore, app.html a <router-outlet></router-outlet> hoye jai, as like `router-view` in vue
+
+# 9. Signals
+
+- ref() equivalent signal 
+- signal import kore use kore jabe.
+- count.value = 100;  -> equivalent count.set(100);
+
+# 10. services
+- service created - `ng generate service services/user`
+- then user.ts file pabo. sekhane akta method nilam changeName then jekhane use korbo sekhane import kore niye inject kore dile
+- sei inject er maddhome sei template mane html file a sob access pabo, and dynamically data change hobe
 
 
 # Later
@@ -109,4 +121,4 @@ disabled, name , type = button, reset, submit, value
 * ✅ Event Binding
 * ✅ Custom Two-way Binding concept
 * ✅ `<ng-content>`
-* ✅ Router
+* ✅ Router & Pages
