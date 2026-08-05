@@ -38,4 +38,12 @@ export class App {
 
   user = inject(User)
 
+  users: any[] = [];
+
+  ngOnInit() {
+    this.user.getUsers().subscribe(data => {
+      this.users = data as any[];
+    });
+  }
+
 }

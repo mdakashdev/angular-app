@@ -15,6 +15,11 @@
 <p>{{ user.testname()  }}</p>
 <button (click)="user.changeName('ALi')">Change</button>
 <hr>
+<h2>Users</h2>
+@for (user of users; track user.id) {
+  <p>{{ user.name }}</p>
+}
+<hr>
 <h1>Input Component</h1>
 <app-button
   name="subject"

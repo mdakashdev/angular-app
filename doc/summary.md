@@ -105,11 +105,34 @@ disabled, name , type = button, reset, submit, value
 - then user.ts file pabo. sekhane akta method nilam changeName then jekhane use korbo sekhane import kore niye inject kore dile
 - sei inject er maddhome sei template mane html file a sob access pabo, and dynamically data change hobe
 
+# 11. Observable
+
+# 12. Http Client
+
+- component theke directly call kora uchit na. ei jonno composable hoye asa ta valo.
+- flow ta emon hote hobe: component - composable - api call (vue )
+- component - service - http_client - backend (angular a)
+- Enable HttpClient mane, provideHttpClient()` provider register korte hobe. in app.config.ts
+- then http er madhome url get korlam.
+- then service ta jekhane use korbo, sekhane import korbo aar inject kore dibo jeno template pai.
+- component render hobar sathe jeno data load hoye takhe sei jonno `life cycle hook` use korbo - ngOnInit (as like onMounted)
+- hook url https://angular.dev/guide/components/lifecycle
+- then subscribe use kore, data gulo niyechi then template a use koreci.
+ - subscribe()
+
+# 11. State Management
+
 
 # Later
 
 - [(ngModel)]
-
+- "Observable কী? Promise থাকলে Observable কেন?"
+- Promise 
+- Observable 
+- subscribe()
+- pipe()
+- map()
+- HTTP Client (Advanced)
 
 
 # Done
