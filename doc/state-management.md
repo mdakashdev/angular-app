@@ -6,6 +6,14 @@
 
 ## 
 
+# Lesson 3 - withMethods()
+
+##
+
+# Lesson 4 - HTTP Integration
+
+##
+
 ---
 
 

@@ -1,7 +1,9 @@
 import {
   signalStore,
   withState,
-  withComputed
+  withComputed,
+  withMethods,
+  patchState
 } from '@ngrx/signals';
 
 import { computed } from '@angular/core';
@@ -20,5 +22,14 @@ export const UserStore = signalStore(
     fullName: computed(() =>
       `${store.firstname()} ${store.lastname()}`
     ),
+  })),
+
+  withMethods((store) => ({
+    changeFirstName(name: string) {
+      patchState(store, {
+        firstname: name
+      })
+    }
   }))
+  
 );
