@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
+import { UserStore } from '../../stores/user.store'
 
 @Component({
   selector: 'app-about',
@@ -7,4 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './about.css',
 })
 
-export class AboutComponent {}
+export class AboutComponent {
+  user = inject(UserStore)
+}

@@ -120,8 +120,26 @@ disabled, name , type = button, reset, submit, value
 - then subscribe use kore, data gulo niyechi then template a use koreci.
  - subscribe()
 
-# 11. State Management
+# 11. State Management - NgRx https://ngrx.io/  or [Signal Store](https://ngrx.io/guide/signals/signal-store) (as like pinia)
+- install korte hobe - pnpm install @ngrx/signals
+- folder structure - stores/
+- 5 ta lession a shikbo - state, computed, method, HTTP Integration and authentication 
 
+
+
+
+
+# Vue Mapping
+
+| Vue              | Angular        |
+| ---------------- | -------------- |
+| `ref()`          | `signal()`     |
+| `computed()`     | `computed()`   |
+| `watch()`        | `effect()`     |
+| `provide/inject` | `Service + DI` |
+| Pinia            | Signal Store   |
+
+---
 
 # Later
 
