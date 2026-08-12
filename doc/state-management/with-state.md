@@ -36,9 +36,9 @@ npm install @ngrx/signals
 
 ```text
 stores/
-    auth.store.ts
-    user.store.ts
-    cart.store.ts
+    auth.state.ts
+    user.state.ts
+    cart.state.ts
 ```
 
 Vue-তেও তো একই রকম করো।
@@ -53,7 +53,7 @@ stores/
 
 # Step 3 — User Store
 
-`stores/user.store.ts`
+`stores/user.state.ts`
 
 ```ts
 import { signalStore, withState } from '@ngrx/signals';
@@ -257,7 +257,7 @@ withState({
 
 # 🎯 Practice
 
-একটা `cart.store.ts` বানাও।
+একটা `cart.state.ts` বানাও।
 
 State রাখো:
 
