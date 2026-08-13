@@ -4,6 +4,7 @@ import { InputComponent } from './components/input/input';
 import { ButtonComponent } from './components/button/button'
 import { User } from './services/user';
 import { UserStore } from './stores/user.store'
+import { useStoreState } from './stores/state.store'
 
 @Component({
   selector: 'app-root',
@@ -48,5 +49,8 @@ export class App {
       this.users = data as any[];
     });
   }
+
+  //inject state.store.ts
+  newStore = inject(useStoreState);
 
 }
