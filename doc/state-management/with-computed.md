@@ -330,7 +330,7 @@ withComputed((store)=>({
 
 # একটা Practice
 
-তুমি একটা `cart.store.ts` বানাও।
+তুমি একটা `cart.state.ts` বানাও।
 
 State:
 

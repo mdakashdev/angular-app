@@ -445,9 +445,9 @@ npm install @ngrx/signals
 
 ```text
 stores/
-    auth.store.ts
-    user.store.ts
-    cart.store.ts
+    auth.state.ts
+    user.state.ts
+    cart.state.ts
 ```
 
 Vue

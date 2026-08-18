@@ -67,3 +67,6 @@ export class App {
 <h2>{{ store.fullName() }}</h2>
 ```
 - then jei name a inject korechi, seta diye sobkichu dhorte pari.
+
+--- 
+Note: Describe jante hole - `create-computed.md` file ta read korte paro.
