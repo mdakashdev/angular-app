@@ -1,6 +1,16 @@
-## Task 
-1. akta card componet create korbo jekhane name slot use korbo 
-2. 
+# Topics
+
+- Build App
+- Folder Structure (Pending)
+- Create Component (Props, slot, two-way binding, Emit, Event)
+- Route and Page
+- Signal (as like ref)
+- Services and Http Client (as like composable)
+- Observable (Pending)
+- Store (State Management)
+
+
+# 1. Build App
 
 ## app start
 
@@ -8,9 +18,10 @@
 ng serve
 ```
 
-# 1. Build App
+# 2. Folder Structure / Project Structure
+- not started yet
 
-# 2. Create Component
+# 3. Create Component
 
 ```text
 angular a component create/generate korte hole command er maddhome korte hobe; 
@@ -43,7 +54,7 @@ disabled, name , type = button, reset, submit, value
 </app-button>
 ```
 
-# 3. Props 
+# 4. Props 
 
 - props kivabe declare korte hoi- @Input() use kore
 
@@ -51,7 +62,7 @@ disabled, name , type = button, reset, submit, value
 - app.html(parent) -> child(button.ts, button.html)
 - typeScript er jonno alada type/interface declare kora jai, same to vue
 
-# 4. slot
+# 5. slot
 - Angular-এ `<slot>` নেই।
 - but <ng-content></ng-content> ache, 
 - component a amra jemon likhtam </slot> thik temoni likhbo <ng-content></ng-content>
@@ -60,7 +71,7 @@ disabled, name , type = button, reset, submit, value
 - Angular-এ named slot-এর equivalent হলো **content projection with `select`**।
 - https://angular.dev/guide/components/content-projection
 
-# 5. two way binding
+# 6. two way binding
 - as like v-model="username" -->  [(value)] = "username"
 
 - app.ts parent:
@@ -74,7 +85,7 @@ disabled, name , type = button, reset, submit, value
   - [value]="usernmae" (valueChange)="usernmae = $event"    
   - https://angular.dev/guide/templates/two-way-binding
 
-# 6. Emit
+# 7. Emit
 - emit vue er concept er motoi, ekhane ami child theke parent a listen korbo, se jonno
 - template part a, click a method call korbo - angular a template part hocche - button.html exm- `(click)="handleClick()"`
 - then ei method ta script part a dhorbo, ekhane script part hocche - button.ts exm- handleClick() { this.tested.emit(); }
@@ -83,31 +94,32 @@ disabled, name , type = button, reset, submit, value
 - `parent a recv` : parent mane jekhane ami ei button use korechi - app.html - exmp -  `(clicked)="saveUser()"`
 - amra jani same name (mane event name diye listen korte hobe) parent a - event name: clicked, sei jaigai saveUser diye use korbo
 
-# 7. Event
+# 8. Event
 - event kivabe dhora jai, seta running ache
 - Child → Parent er jonno amra defineEmite use koreachilam
 
-# 8. Routing and pages
+# 9. Routing and pages
 - route korar jonno, page lagbe, so, vue er moto pages folder kore kora jai, but eita manually na kore genereate korlei hoi
 - command: `ng generate component pages/home`
 - vue a jemon routes akta folder kore route.ts akta file a route object create korte hoi.but ekhane app.route.ts name age theke akta file thake
 - sekhanei path diye page dhoriye dilei hobe.
 - then app.ts a RouterOutlet import kore, app.html a <router-outlet></router-outlet> hoye jai, as like `router-view` in vue
 
-# 9. Signals
+# 10. Signals
 
 - ref() equivalent signal 
 - signal import kore use kore jabe.
 - count.value = 100;  -> equivalent count.set(100);
 
-# 10. services
+# 11. services
 - service created - `ng generate service services/user`
 - then user.ts file pabo. sekhane akta method nilam changeName then jekhane use korbo sekhane import kore niye inject kore dile
 - sei inject er maddhome sei template mane html file a sob access pabo, and dynamically data change hobe
 
-# 11. Observable
+# 12. Observable
+- not started yet
 
-# 12. Http Client
+# 13. Http Client
 
 - component theke directly call kora uchit na. ei jonno composable hoye asa ta valo.
 - flow ta emon hote hobe: component - composable - api call (vue )
@@ -120,7 +132,7 @@ disabled, name , type = button, reset, submit, value
 - then subscribe use kore, data gulo niyechi then template a use koreci.
  - subscribe()
 
-# 11. State Management - NgRx https://ngrx.io/  or [Signal Store](https://ngrx.io/guide/signals/signal-store) (as like pinia)
+# 14. State Management - NgRx https://ngrx.io/  or [Signal Store](https://ngrx.io/guide/signals/signal-store) (as like pinia)
 - install korte hobe - pnpm install @ngrx/signals
 - folder structure - stores/
 - 5 ta lession a shikbo - state, computed, method, HTTP Integration and authentication 
@@ -151,15 +163,3 @@ disabled, name , type = button, reset, submit, value
 - pipe()
 - map()
 - HTTP Client (Advanced)
-
-
-# Done
-
-* ✅ Component
-* ✅ `@Input()`
-* ✅ `@Output()`
-* ✅ Property Binding
-* ✅ Event Binding
-* ✅ Custom Two-way Binding concept
-* ✅ `<ng-content>`
-* ✅ Router & Pages
